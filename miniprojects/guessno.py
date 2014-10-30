@@ -1,4 +1,5 @@
-http://www.codeskulptor.org/#user38_ZZEl15nqbP_0.py
+#go to this link to run the code
+#http://www.codeskulptor.org/#user38_ZZEl15nqbP_0.py
 # template for "Guess the number" mini-project
 
 # input will come from buttons and an input field
@@ -15,27 +16,11 @@ attempts,count,secretno=0,0,0
 
 def new_game():
 
-    # initialize global variables used in your code here
-
-
-
-    # remove this when you add your code    
-
     print 'New game...'
 
     print 'Select the number range.'
 
-
-
-# define event handlers for control panel
-
 def range100():
-
-    # button that changes the range to [0,100) and starts a new game 
-
-    
-
-    # remove this when you add your code    
 
     global secretno,attempts,count
 
@@ -49,8 +34,6 @@ def range100():
 
 def range1000():
 
-    # button that changes the range to [0,1000) and starts a new game     
-
     global attempts,secretno,count
 
     attempts,count=0,10
@@ -59,9 +42,7 @@ def range1000():
 
     print 'New Game... Range is from 0 to 1000'
 
-    
 
-    
 
 def input_guess(guess):
 
@@ -93,16 +74,6 @@ def input_guess(guess):
 
         print 'Secretnumber is lower and %d attemts left\n'%count
 
-        # main game logic goes here	
-
-    
-
-    # remove this when you add your code
-
-    
-
-
-
     
 
 # create frame
@@ -122,15 +93,9 @@ frame.add_button("Range: 0-1000", range1000, 100)
 frame.add_input("Enter guess:", input_guess, 100)
 
 
-
-
-
 # call new_game 
 
 new_game()
 
 
-
 frame.start()
-
-# always remember to check your completed program against the grading rubric
