@@ -31,7 +31,7 @@ def range100():
     print 'New Game.. Range is from 0 to 100'
 
     
-
+#Buttons
 def range1000():
 
     global attempts,secretno,count
@@ -75,14 +75,9 @@ def input_guess(guess):
         print 'Secretnumber is lower and %d attemts left\n'%count
 
     
-
 # create frame
 
 frame = simplegui.create_frame("Guess the number", 100,200, 100)
-
-
-
-
 
 # register event handlers for control elements and start frame
 
