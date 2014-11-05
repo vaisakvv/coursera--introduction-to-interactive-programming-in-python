@@ -1,8 +1,3 @@
-# Rock-paper-scissors-lizard-Spock template
-
-
-
-
 
 # The key idea of this program is to equate the strings
 
@@ -22,15 +17,9 @@
 
 # 4 - scissors
 
-
-
-# helper functions
-
 import random
 
 def name_to_number(name):
-
-    # delete the following pass statement and fill in your code below
 
     if name== 'rock':
 
@@ -56,21 +45,8 @@ def name_to_number(name):
 
         print "Invalid name"
 
-        
-
-
-
-    # convert name to number using if/elif/else
-
-    # don't forget to return the result!
-
-
-
-
 
 def number_to_name(number):
-
-    # delete the following pass statement and fill in your code below
 
     if number==0:
 
@@ -98,71 +74,30 @@ def number_to_name(number):
 
         
 
-    # convert number to a name using if/elif/else
-
-    # don't forget to return the result!
-
-    
-
-
-
 def rpsls(player_choice): 
-
-    # delete the following pass statement and fill in your code below
-
-    print 'Player chooses',player_choice
-
-    player_number=name_to_number(player_choice)
-
-    comp_number=random.randrange(0,4)
-
-    comp_choice=number_to_name(comp_number)
-
-    print "Computer chooses ",comp_choice
-    
-    if abs(comp_number-player_number)<=2:
-    	print "Computer wins !!"
+     
+    if not(player_choice == 'rock' or player_choice == 'Spock' or player_choice=='paper' or player_choice=='lizard' or player_choice=='scissors'):
+        print "Invalid input \n"
     else:
-    	print "Player wins !!"
+        print 'Player chooses',player_choice
 
+        player_number=name_to_number(player_choice)
 
+        comp_number=random.randrange(0,4)
 
+        comp_choice=number_to_name(comp_number)
 
-    # print a blank line to separate consecutive games
-
-
-
-    # print out the message for the player's choice
-
-
-
-    # convert the player's choice to player_number using the function name_to_number()
-
-
-
-    # compute random guess for comp_number using random.randrange()
-
-
-
-    # convert comp_number to comp_choice using the function number_to_name()
-
+        print "Computer chooses ",comp_choice
     
-
-    # print out the message for computer's choice
-
-
-
-    # compute difference of comp_number and player_number modulo five
-
-
-
-    # use if/elif/else to determine winner, print winner message
-
-
-
+        if comp_number-player_number==0:
+            print "Game tie..."
+        elif (comp_number-player_number)%5 <=2:
+            print "Computer wins !!"
+        else:
+            print "Player wins !!"
+        print "\n"
     
-
-# test your code - THESE CALLS MUST BE PRESENT IN YOUR SUBMITTED CODE
+    
 
 rpsls("rock")
 
